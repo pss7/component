@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "tag": "HTML",
+    "imageSrc": "/images/html.png",
+    "imageAlt": "HTML",
+    "title": "HTML",
+    "desc": "HTML입니다."
+  },
+  {
+    "id": 2,
+    "tag": "CSS",
+    "imageSrc": "/images/css.png",
+    "imageAlt": "CSS",
+    "title": "CSS",
+    "desc": "CSS입니다."
+  },
+  {
+    "id": 3,
+    "tag": "JS",
+    "imageSrc": "/images/js.png",
+    "imageAlt": "JS",
+    "title": "JS",
+    "desc": "JS입니다."
+  }
+]
+
+
+
