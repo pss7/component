@@ -1,12 +1,13 @@
 import React from 'react';
 
 interface cardProps {
-    id: string | number;
+    key: string | number;
+    id?: number;
     tag: string;
     title: string;
     desc: string;
-    imageAlt : string;
-    imageSrc : string;
+    imageAlt: string;
+    imageSrc: string;
 }
 
 function Card({ id, tag, title, desc, imageAlt, imageSrc }: cardProps) {

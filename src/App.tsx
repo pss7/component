@@ -6,6 +6,8 @@ import Select from "./component/Select";
 import Breadcrumb from "./component/Breadcrumb";
 import Tab from "./component/Tab";
 import Card from "./component/Card";
+import Title from "./component/Title";
+import Button from "./component/Button";
 
 
 
@@ -43,37 +45,37 @@ function App() {
       name: '오렌지'
     }
   ]
-  
-/*
-[
-    {
-        "id": 0,
-        "title": "TAB1",
-        "description": "CONTENT01"
-    },
-    {
-        "id": 1,
-        "title": "TAB2",
-        "description": "CONTENT02"
-    },
-    {
-        "id": 2,
-        "title": "TAB3",
-        "description": "CONTENT03"
-    },
-    {
-        "id": 3,
-        "title": "TAB4",
-        "description": "CONTENT04"
-    },
-    {
-        "id": 4,
-        "title": "TAB5",
-        "description": "CONTENT05"
-    }
-]
 
-*/
+  /*
+  [
+      {
+          "id": 0,
+          "title": "TAB1",
+          "description": "CONTENT01"
+      },
+      {
+          "id": 1,
+          "title": "TAB2",
+          "description": "CONTENT02"
+      },
+      {
+          "id": 2,
+          "title": "TAB3",
+          "description": "CONTENT03"
+      },
+      {
+          "id": 3,
+          "title": "TAB4",
+          "description": "CONTENT04"
+      },
+      {
+          "id": 4,
+          "title": "TAB5",
+          "description": "CONTENT05"
+      }
+  ]
+  
+  */
 
   const tabData = [
     {
@@ -116,7 +118,7 @@ function App() {
 
 
 
-  
+
   const [cardList, setCardList] = useState<any[]>([]);
   useEffect(() => {
     fetch("/data/cardData.json")
@@ -187,19 +189,11 @@ function App() {
 
         <div className="box">
           <h2>Card</h2>
-
-
-
-
-
-
-
           {
             cardList.map((cardList) => {
               return (
                 <Card
                   key={cardList.id}
-                  id={cardList.id}
                   tag={cardList.tag}
                   imageAlt={cardList.imageAlt}
                   imageSrc={cardList.imageSrc}
@@ -209,25 +203,19 @@ function App() {
               );
             })
           }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
+
+        <div className="box">
+          <h2>Title</h2>
+          <Title h1="h1" h2="h2" h3="h3" h4="h4" h5="h5" h6="h6" />
+        </div>
+
+        <div className="box">
+          <h2>Button</h2>
+          <Button text="button" onClick={() => { alert('클릭'); }} disabled={false} />
+        </div>
+
+
 
       </div>
     </BrowserRouter>
