@@ -1,16 +1,19 @@
 import React from "react";
+import { ReactNode } from 'react';
 
 interface buttonProps {
-    onClick: () => void;
-    disabled: boolean;
-    text: string;
+    onClick?: () => void;
+    disabled?: boolean;
+    text?: string;
+    children?: ReactNode;
 }
 
-function Button({ onClick, disabled, text }: buttonProps) {
+function Button({ children, onClick, disabled, text }: buttonProps) {
 
     return (
         <>
             <button className="button" onClick={onClick} disabled={disabled}>
+                {children}
                 {text}
             </button>
         </>

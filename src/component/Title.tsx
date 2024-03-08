@@ -1,27 +1,19 @@
-import React from "react";
-
+import { ReactNode } from 'react';
 
 interface titleProps {
-    h1: string;
-    h2: string;
-    h3: string;
-    h4: string;
-    h5: string;
-    h6: string;
+
+    level: number;
+    text?: string;
+    className?: string;
+    children?: ReactNode;
+
 }
 
-function Title({ h1, h2, h3, h4, h5, h6 }: titleProps) {
+function Title({ level, text, className, children }: titleProps) {
 
-    return (
-        <>
-            <h1>{h1}</h1>
-            <h2>{h1}</h2>
-            <h3>{h1}</h3>
-            <h4>{h1}</h4>
-            <h5>{h1}</h5>
-            <h6>{h1}</h6>
-        </>
-    )
+    const Tag = `h${level}` as keyof JSX.IntrinsicElements;
+
+    return <Tag className={className}>{children}{text}</Tag>;
 
 }
 
