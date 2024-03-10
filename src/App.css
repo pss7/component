@@ -2,62 +2,256 @@
   padding: 0 20px;
 }
 
-
+/* header */
 #header {
   height: 71px;
-  background-color: #77b6ed;
+  background-color: #368dd8;
   box-shadow: 0px 3px 13px rgba(0, 0, 0, .1);
 }
 
-.header {
+#header {
   padding: 19px 0;
   display: flex;
   gap: 0 30px;
   align-items: center;
 }
 
-.header h1 {
+#header h1 {
   color: #fff;
 }
 
-.header h2 {
+#header h2 {
   font-size: 26px;
 }
 
-.header .menuBox {
-  padding-top: 30px;
-  top: 72px;
-  height: 100% !important;
-  box-shadow: 3px 3px 13px rgba(0, 0, 0, .1);
-}
-
-.header .listWrap {
+#header .listWrap {
   margin-top: 25px;
 }
 
-.header .listWrap a {
+#header .listWrap a {
   margin-bottom: -1px;
-  padding: 12px 0 12px 20px;
+  padding: 12px 0 12px 12px;
   display: block;
   text-align: left;
   border: 1px solid #ececec;
   border-width: 0 0 1px;
-  font-size: 18px;
   font-weight: 500;
 }
 
-.header .menuWrap .menuBox {
-  padding: 30px 10px 0;
+#header .menuWrap {
+  padding: 30px 20px 0;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 3px 3px 13px rgba(0, 0, 0, .1);
+  transition: all .3s;
+  z-index: 999;
 }
 
+#header .menuWrap.active {
+  left: 0;
+}
+
+/* main */
 #main {
-  padding: 30px 0 0 300px;
+  margin-left: 224px;
+  padding: 18px 20px 0;
+  text-align: center;
 }
 
-#main h3 {
-  text-align: center;
-  font-size: 26px;
+/* button */
+.button {
+  padding: 5px 20px;
+  border-radius: 20px;
+  border: 1px solid #c5c5c5;
 }
+
+/* input */
+.inputWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 0 5px;
+}
+
+.input {
+  padding: 5px 20px;
+  border-radius: 20px;
+  border: 1px solid #c5c5c5;
+}
+
+/* select */
+.select {
+  padding: 5px 20px 5px 10px;
+  border: 1px solid #c5c5c5;
+}
+
+/* title */
+h1 {
+  margin: 30px 0;
+}
+
+h2 {
+  margin: 30px 0;
+}
+
+h3 {
+  margin: 30px 0;
+}
+
+h4 {
+  margin: 30px 0;
+}
+
+h5 {
+  margin: 30px 0;
+}
+
+h6 {
+  margin: 30px 0;
+}
+
+/* table */
+table {
+  width: 100%;
+}
+
+table thead th {
+  padding: 3px;
+  text-align: center;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  font-size: 14px;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+table tbody tr td {
+  padding: 7px 5px 7px 10px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* tab */
+.tabWrap {
+  margin: 20px 0;
+}
+
+.tabWrap .tabListWrap {
+  display: flex;
+  gap: 0 3px;
+}
+
+.tabWrap .tabListWrap li a {
+  display: block;
+  font-size: 13px;
+  background-color: #ebebeb;
+  text-align: center;
+  padding: 8px 10px 5px;
+  border-radius: 10px 10px 0 0;
+  font-weight: 500;
+  line-height: 1;
+
+}
+
+.tabWrap .tabListWrap li a:hover {
+  color: #fff;
+  background-color: #5b5959;
+  transition: all .3s;
+
+}
+
+.tabWrap .tabListWrap li a.active {
+  color: #fff;
+  background-color: #5b5959;
+}
+
+/* tabContentWrap */
+.tabWrap .tabContentWrap {
+  position: relative;
+  padding: 50px 20px;
+  border: 1px solid #bfbfbf;
+}
+
+.tabWrap .tabContentWrap .tabContent {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+/* .tabContentWrap .downLoadBtnWrap {
+  position: absolute;
+  top: 18px;
+  right: 25px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* bg */
+.backgroundOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .2);
+  z-index: 99;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -144,24 +338,3 @@
 }
 
 img{display: block; width: 30%;} */
-
-
-
-
-
-
-
-
-.menuWrap .menuBox {
-  position: absolute;
-  left: -1000px;
-  width: 300px;
-  height: 300px;
-  text-align: center;
-  /* border: 2px solid #7d7979; */
-  transition: all .3s;
-}
-
-.menuWrap .menuBox.active {
-  left: 0;
-}

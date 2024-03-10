@@ -1,4 +1,3 @@
-import React from "react";
 import { ReactNode } from 'react';
 
 interface buttonProps {
@@ -6,13 +5,16 @@ interface buttonProps {
     disabled?: boolean;
     text?: string;
     children?: ReactNode;
+    type?: "submit" | "reset" | "button" | undefined;
+    title?:string;
+    className?:string;
 }
 
-function Button({ children, onClick, disabled, text }: buttonProps) {
+function Button({ className, title, type, children, onClick, disabled, text }: buttonProps) {
 
     return (
         <>
-            <button className="button" onClick={onClick} disabled={disabled}>
+            <button title={title} type={type} className={className} onClick={onClick} disabled={disabled}>
                 {children}
                 {text}
             </button>
