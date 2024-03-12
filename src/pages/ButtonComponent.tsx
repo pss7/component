@@ -8,7 +8,16 @@ function ButtonComponent() {
     return (
         <Main>
             <Title level={2} text="ButtonComponent" />
-            <Button className="button" title="button" type="button" text="button" onClick={() => { alert("ButtonComponent") }} />
+            <Button
+                id="id"
+                className="className"
+                style={{ background: "skyblue", color: "#fff" }}
+                type="button"
+                title="title"
+                label="label"
+                disabled={true}
+                onClick={() => { alert("클릭") }}
+            />
         </Main>
     )
 

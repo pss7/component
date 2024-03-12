@@ -3,13 +3,14 @@ import React from "react";
 interface SelectProps {
     id?: string;
     name?: string;
-    option?: Array<any>;
+    data?: Array<any>;
     value?: string;
     blind?: string;
     className?: string;
+    disabled?: boolean;
 }
 
-function Select({ className, value, option, id, name, blind }: SelectProps) {
+function Select({ disabled, className, value, data, id, name, blind }: SelectProps) {
 
     return (
         <>
@@ -20,19 +21,19 @@ function Select({ className, value, option, id, name, blind }: SelectProps) {
                 className={className}
                 name={name}
                 id={id}>
-                <option value={value}>111</option>
-                <option value={value}>222</option>
-                <option value={value}>333</option>
-                {/* {
-                    option.map((option, key) => (
+                {
+                    data.map((data, key) => (
                         <option
                             key={key}
-                            value={option.value}
+                            value={data.value}
                         >
-                            {option.name}
+                            {data.label}
                         </option>
                     ))
-                } */}
+                }
+                {/* <option value={value}>111</option>
+                <option value={value}>222</option>
+                <option value={value}>333</option> */}
             </select>
         </>
     )
