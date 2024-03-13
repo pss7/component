@@ -10,11 +10,11 @@ function Header() {
 
     const [toggle, setToogle] = useState(true);
 
-    const toggleDrawer = () => {
+    const open = () => {
         setToogle(!toggle);
     }
 
-    const closeDrawer = () => {
+    const close = () => {
         setToogle(false);
     }
 
@@ -22,10 +22,13 @@ function Header() {
         <header id="header">
             <Container className="container">
                 <Box className="header">
-                    <Button onClick={toggleDrawer}>
+                    <Button onClick={open}>
                         <WidgetsIcon style={{ fill: '#fff' }}></WidgetsIcon>
                     </Button>
-                    <Drawer toggle={toggle} closeDrawer={closeDrawer}>
+                    <Drawer toggle={toggle}>
+                        <Button onClick={close}>
+                            <WidgetsIcon></WidgetsIcon>
+                        </Button>
                         <Title level={2} text="ComponentList" />
                     </Drawer>
                     {/* <BackgroundOverlay toggle={toggle} closeDrawer={closeDrawer} /> */}

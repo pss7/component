@@ -9,14 +9,21 @@ interface InputProps {
     blind?: string;
     className?: string;
     value?: string;
+    autocomplete?: string;
 }
 
-function Input({ id, label, name, type, placeholder, className, blind, value }: InputProps) {
+function Input({ id, label, name, type, placeholder, className, blind, value, autocomplete }: InputProps) {
 
     return (
         <>
             <label htmlFor={id} className={blind}>{label}</label>
-            <input className={className} name={name} id={id} type={type} placeholder={placeholder} />
+            <input
+                className={className}
+                name={name}
+                id={id}
+                type={type}
+                placeholder={placeholder}
+            />
         </>
     )
 

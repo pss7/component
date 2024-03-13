@@ -10,16 +10,14 @@ function InputComponent() {
         <Main>
 
             <Title level={2} text="InputComponent" />
-
-            <Title level={3} text="" />
-            <Input blind="blind" className="input" id="input1" label="text" type="input" placeholder="input" />
-
-
-            {/* <Title level={3} text="" />
-            <Box className="inputWrap">
-                <Input className="input" id="input2" label="label" type="checkbox" />
-            </Box> */}
-
+            <Input
+                blind="blind"
+                className="input"
+                id="input1"
+                label="text"
+                type="input"
+                placeholder="input"
+                autocomplete="on" />
         </Main>
     )
 

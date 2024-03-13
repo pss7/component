@@ -5,10 +5,10 @@ interface DrawerProps {
 
     children?: ReactNode;
     toggle: boolean;
-    closeDrawer: () => void;
+
 }
 
-function Drawer({ toggle, closeDrawer, children }: DrawerProps) {
+function Drawer({ toggle, children }: DrawerProps) {
 
     return (
 

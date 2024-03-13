@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 interface SelectProps {
     id?: string;
@@ -10,7 +10,33 @@ interface SelectProps {
     disabled?: boolean;
 }
 
-function Select({ disabled, className, value, data, id, name, blind }: SelectProps) {
+function Select({ disabled, className, value, id, name, blind }: SelectProps) {
+
+    const [select, setSelect] = useState('');
+
+    const handleChange = (e: any) => {
+        setSelect(e.target.value)
+        console.log(e.target.value)
+    }
+
+    const data = [
+        {
+            label: 'label1',
+            value: 'option1'
+        },
+        {
+            label: 'label2',
+            value: 'option2'
+        },
+        {
+            label: 'label3',
+            value: 'option3'
+        },
+        {
+            label: 'label4',
+            value: 'option4'
+        }
+    ]
 
     return (
         <>
@@ -20,7 +46,9 @@ function Select({ disabled, className, value, data, id, name, blind }: SelectPro
             <select
                 className={className}
                 name={name}
-                id={id}>
+                id={id}
+                onChange={handleChange}
+            >
                 {
                     data.map((data, key) => (
                         <option

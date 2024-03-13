@@ -11,7 +11,7 @@ function ButtonComponent() {
             <Button
                 id="id"
                 className="className"
-                style={{ background: "skyblue", color: "#fff" }}
+                style={{ background: "", color: "" }}
                 type="button"
                 title="title"
                 label="label"
