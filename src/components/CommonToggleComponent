@@ -1,0 +1,26 @@
+// import React, { ReactNode, useState } from 'react';
+
+// interface CommonToggle {
+
+//     children?: ReactNode;
+//     isOpen?: boolean;
+//     buttonText: string;
+
+// }
+
+// function CommonToggleComponent({ buttonText, children }: CommonToggle) {
+//     const [isOpen, setIsOpen] = useState(false);
+
+//     const toggle = () => {
+//         setIsOpen(!isOpen);
+//     };
+
+//     return (
+//         <div>
+//         <button onClick= { toggle } > < /button>
+//     { isOpen && children }
+//     </div>
+//   )
+// }
+
+// export default CommonToggleComponent;

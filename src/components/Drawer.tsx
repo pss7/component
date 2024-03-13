@@ -1,19 +1,31 @@
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Button from "./Button";
+import WidgetsIcon from '@mui/icons-material/Widgets';
 
 interface DrawerProps {
 
     children?: ReactNode;
-    toggle: boolean;
+    isOpen?: boolean;
 
 }
 
-function Drawer({ toggle, children }: DrawerProps) {
+function Drawer({ children }: DrawerProps) {
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => {
+        setIsOpen(!isOpen);
+    };
 
     return (
 
-        <div className={`menuWrap ${toggle === false ? "" : "active"} `}>
+        <div className={`menuWrap ${isOpen === true ? "" : "active"} `}>
             <div className="menuBox">
+                <Button onClick={toggle}>
+                    <WidgetsIcon></WidgetsIcon>
+                </Button>
+
                 {children}
 
                 <ul className="listWrap">
