@@ -8,17 +8,32 @@ import Title from "../Title";
 
 function Header() {
 
+    const [drawerToggle, setDrawerToggle] = useState(true);
+
+    const drawerOpen = () => {
+        setDrawerToggle(!drawerToggle);
+    }
+
+    const drawerClose = () => {
+        setDrawerToggle(false);
+    }
+
     return (
         <header id="header">
             <Container className="container">
                 <Box className="header">
-                    {/* <Button onClick={open}>
+
+                    <Button onClick={drawerOpen}>
                         <WidgetsIcon style={{ fill: '#fff' }}></WidgetsIcon>
-                    </Button> */}
-                    <Drawer>
+                    </Button>
+
+                    <Drawer drawerToggle={drawerToggle}>
+                        <Button onClick={drawerClose}>
+                            <WidgetsIcon></WidgetsIcon>
+                        </Button>
                         <Title level={2} text="ComponentList" />
                     </Drawer>
-                    {/* <BackgroundOverlay toggle={toggle} closeDrawer={closeDrawer} /> */}
+
                 </Box>
             </Container>
         </header>

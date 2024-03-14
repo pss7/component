@@ -10,7 +10,7 @@ function ButtonComponent() {
             <Title level={2} text="ButtonComponent" />
             <Button
                 id="id"
-                className="className"
+                className="button"
                 style={{ background: "", color: "" }}
                 type="button"
                 title="title"

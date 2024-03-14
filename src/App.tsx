@@ -13,6 +13,8 @@ const InputComponent = lazy(() => import('./pages/InputComponent'));
 const SelectComponent = lazy(() => import('./pages/SelectComponent'));
 const TableComponent = lazy(() => import('./pages/TableComponent'));
 const TabComponent = lazy(() => import('./pages/TabComponent'));
+const ModalComponent = lazy(() => import('./pages/ModalComponent'));
+const PaginationComponent = lazy(() => import('./pages/PaginationComponent'));
 
 function App() {
 
@@ -28,6 +30,8 @@ function App() {
           <Route path="/selectcomponent" element={<SelectComponent />} />
           <Route path="/tablecomponent" element={<TableComponent />} />
           <Route path="/tabcomponent" element={<TabComponent />} />
+          <Route path="/modalComponent" element={<ModalComponent />} />
+          <Route path="/paginationComponent" element={<PaginationComponent />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

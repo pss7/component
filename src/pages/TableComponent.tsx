@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Table from "../components/Table"
 import Title from "../components/Title"
 import Main from "../components/layout/Main"

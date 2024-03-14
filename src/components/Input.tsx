@@ -16,14 +16,16 @@ function Input({ id, label, name, type, placeholder, className, blind, value, au
 
     return (
         <>
-            <label htmlFor={id} className={blind}>{label}</label>
-            <input
-                className={className}
-                name={name}
-                id={id}
-                type={type}
-                placeholder={placeholder}
-            />
+            <div className="inputBox">
+                <label htmlFor={id} className={blind}>{label}</label>
+                <input
+                    className={className}
+                    name={name}
+                    id={id}
+                    type={type}
+                    placeholder={placeholder}
+                />
+            </div>
         </>
     )
 

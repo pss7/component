@@ -11,6 +11,8 @@ table {border-collapse: collapse; border-spacing: 0;}
 
 body, input, textarea, select, button, table{font-family: 'Noto Sans KR', sans-serif; color: #000; font-size: 16px;}
 
+input{margin: 0; padding: 0;}
+
 fieldset, img{border:0;}
 
 body, div, p, ul, ol, li, dl, dd, dt, h1, h2, h3, h4, h5, h6, table, tr, th, td,

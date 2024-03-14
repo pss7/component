@@ -1,20 +1,22 @@
-import React, { useState } from 'react';
-import Button from "./Button";
-import WidgetsIcon from '@mui/icons-material/Widgets';
 
-const Modal = () => {
-    const [isOpen, setIsOpen] = useState(false);
 
-    const toggle = () => {
-        setIsOpen(!isOpen);
-    };
+import { ReactNode } from 'react';
+import Title from './Title';
+
+interface modalToggle {
+
+    modalToggle: boolean;
+    children?: ReactNode;
+
+}
+
+const Modal = ({ modalToggle, children }: modalToggle) => {
 
     return (
-        <>
-            <Button onClick={toggle}>
-                <WidgetsIcon></WidgetsIcon>
-            </Button>
-        </>
+        <div className={`modalWrap ${modalToggle === false ? "" : "active"} `}>
+            <Title level={3} text="Modal" />
+            {children}
+        </div>
     );
 };
 

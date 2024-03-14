@@ -6,7 +6,8 @@ function Home() {
 
     return (
         <Main>
-            <Title level={2} text="Home" />
+            <Title level={1} text="Home" />
+            <Title level={2} text="CommonComponentList" />
         </Main>
     )
 
